@@ -11,9 +11,15 @@ if ("serviceWorker" in navigator){
 function checkData(){
     var dropdownValue = document.getElementById("System").value;
     var dateValue = document.getElementById("DateUser").value;
-    if (dropdownValue === "" || dateValue === "") {
-        alert("Por favor, completa todos los campos.");
-    } else {
-       alert("Muy bien");
+    if(dropdownValue === "" && dateValue !== ""){
+        alert("Por favor, seleccione el sistema.");
+    }else if(dropdownValue !== "" && dateValue === ""){
+        alert("Por favor, seleccione la fecha.");
+    }else if(dropdownValue === "" && dateValue === ""){
+        alert("Por favor, selecciona la fecha y el sistema.");
+    }else {
+        // Se debe cambiar esto
+        alert("Muy bien");
     }
+
 }
