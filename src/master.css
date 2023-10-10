@@ -1,3 +1,9 @@
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .title{
     display: flex;
     justify-content: center;
@@ -39,6 +45,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .btn-Mat{
@@ -56,6 +63,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .btn-BdD{
@@ -73,6 +81,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .btn-Inf{
@@ -90,6 +99,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .slcSystem{
@@ -155,4 +165,5 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }

@@ -7,3 +7,13 @@ if ("serviceWorker" in navigator){
         console.log(error);
     })
 }
+
+function checkData(){
+    var dropdownValue = document.getElementById("System").value;
+    var dateValue = document.getElementById("DateUser").value;
+    if (dropdownValue === "" || dateValue === "") {
+        alert("Por favor, completa todos los campos.");
+    } else {
+       alert("Muy bien");
+    }
+}
