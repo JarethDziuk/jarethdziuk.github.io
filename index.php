@@ -1,3 +1,6 @@
+<?php
+        $connect = mysqli_connect("sql10.freesqldatabase.com:3306", "sql10652724", "uR7muAIU66", "sql10652724");
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -45,8 +48,41 @@
                         Seleccione la fecha:
                         <input type="date" min="2022-01-01" max="2022-12-31" class="date" id="DateUser">
                     </form>
-                    <button class="btn-Eva" onclick="checkData()">Evaluar</button>
-                    
+                    <button class="btn-Eva" onclick="consultar()">Evaluar</button>
+                </div>
+                <div class="dtable">
+                <table>
+                    <tr>
+                        <td>Sistema</td>
+                        <td>Gestion</td>
+                        <td>Mes</td>
+                        <td>Dia</td>
+                        <td>Dato T</td>
+                        <td>Dato H</td>
+                        <td>Dato P</td>
+                        <td>Dato FPF</td>
+                        <td>Estado</td>
+                    </tr>
+                    <?php
+                    $sql="SELECT * FROM Datos WHERE idDato<10";
+                    $result=mysqli_query($connect,$sql);
+                    while($mostrar=mysqli_fetch_array($result)){
+                    ?>
+                    <tr>
+                        <td><?php echo $mostrar['sistema'] ?></td>
+                        <td><?php echo $mostrar['gestion'] ?></td>
+                        <td><?php echo $mostrar['mes'] ?></td>
+                        <td><?php echo $mostrar['dia'] ?></td>
+                        <td><?php echo $mostrar['dato_t'] ?></td>
+                        <td><?php echo $mostrar['dato_h'] ?></td>
+                        <td><?php echo $mostrar['dato_p'] ?></td>
+                        <td><?php echo $mostrar['dato_fpf'] ?></td>
+                        <td><?php echo $mostrar['estado'] ?></td>
+                    </tr>
+                    <?php
+                    }
+                    ?>
+                </table>
                 </div>
             </nav>
         </div>

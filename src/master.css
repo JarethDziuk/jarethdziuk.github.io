@@ -168,3 +168,21 @@ body {
     align-items: center;
     cursor: pointer;
 }
+
+.dtable{
+    border: 5;
+    display: flex;
+    border: 5px solid #000;
+    height: 75px;
+    width: 200px;
+    position: fixed;
+    left: 50px;
+    top: 355px;
+    border-radius: 10px;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
